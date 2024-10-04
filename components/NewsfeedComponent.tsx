@@ -6,16 +6,16 @@ import Image from 'next/image';
 
 interface NewsArticle {
     source: {
-        id: string | null; // Allow null values for id
-        name: string | null; // Allow null values for name
+        id: string; // Allow null values for id
+        name: string; // Allow null values for name
     };
-    author: string | null; // Allow null values for author
-    title: string | null; // Allow null values for title
-    description: string | null; // Allow null values for description
-    url: string | null; // Allow null values for url
-    urlToImage: string | null; // Allow null values for urlToImage
-    publishedAt: string | null; // Allow null values for publishedAt
-    content: string | null; // Allow null values for content
+    author: string; // Allow null values for author
+    title: string; // Allow null values for title
+    description: string; // Allow null values for description
+    url: string; // Allow null values for url
+    urlToImage: string; // Allow null values for urlToImage
+    publishedAt: string; // Allow null values for publishedAt
+    content: string; // Allow null values for content
 }
 
 export default function NewsfeedComponent() {
