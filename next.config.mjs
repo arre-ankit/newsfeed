@@ -8,6 +8,17 @@ if (process.env.NODE_ENV === 'development') {
 }
 
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    domains: [
+      'media.wired.com',
+      'cdn.vox-cdn.com', // Existing domain
+      'gizmodo.com', // Add this line for gizmodo.com
+      // Add any other domains you need
+    ],
+  },
+  reactStrictMode: true,
+  // Other Next.js configurations can go here
+};
 
 export default nextConfig;
