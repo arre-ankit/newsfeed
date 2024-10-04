@@ -26,12 +26,7 @@ export default function NewsfeedComponent() {
     useEffect(() => {
         async function fetchNews() {
             try {
-                const url = `https://newsapi.org/v2/everything?` +
-                    `q=technology&` +
-                    `sortBy=popularity&` +
-                    `apiKey=86478c19e1e147a3ab881efa9e2ef662`;
-    
-                const response = await fetch(url);
+                const response = await fetch('/api/news'); // Call the Next.js API route
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
                 }
@@ -50,7 +45,7 @@ export default function NewsfeedComponent() {
                 setIsLoading(false);
             }
         }
-    
+
         fetchNews();
     }, []);
 

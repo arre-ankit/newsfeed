@@ -1,7 +1,7 @@
-import type { NextRequest } from 'next/server';
-import { getRequestContext } from '@cloudflare/next-on-pages';
+import type { NextRequest } from 'next/server'
+import { getRequestContext } from '@cloudflare/next-on-pages'
 
-export const runtime = 'edge';
+export const runtime = 'edge'
 
 export async function GET(request: NextRequest) {
     const url = `https://newsapi.org/v2/everything?q=technology&sortBy=popularity&apiKey=86478c19e1e147a3ab881efa9e2ef662`;
